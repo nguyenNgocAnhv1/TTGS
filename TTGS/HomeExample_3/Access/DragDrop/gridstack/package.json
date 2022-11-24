@@ -1,0 +1,131 @@
+{
+  "_from": "gridstack",
+  "_id": "gridstack@7.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-ru+1mZ78aPwGZMIAMu3dAqSFhgiCiAPpciBrcK/ru9os0jtvvz1+/LGRn7Bv9gMENjflQAnM+RLTjLrjqsgNbg==",
+  "_location": "/gridstack",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gridstack",
+    "name": "gridstack",
+    "escapedName": "gridstack",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gridstack/-/gridstack-7.1.1.tgz",
+  "_shasum": "61ba389dec8d053c1e132ba1863f52f597ef1a5a",
+  "_spec": "gridstack",
+  "_where": "C:\\Users\\ngocanh",
+  "author": {
+    "name": "Alain Dumesny",
+    "email": "alaind831+github@gmail.com",
+    "url": "https://github.com/adumesny"
+  },
+  "bugs": {
+    "url": "https://github.com/gridstack/gridstack.js/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Pavel Reznikov",
+      "email": "pashka.reznikov@gmail.com"
+    },
+    {
+      "name": "Dylan Weiss",
+      "email": "dylan.weiss@gmail.com",
+      "url": "https://dylandreams.com"
+    }
+  ],
+  "deprecated": false,
+  "description": "TypeScript/JS lib for dashboard layout and creation, responsive, mobile support, no external dependencies, with many wrappers (React, Angular, Vue, Ember, knockout...)",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.9",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "connect": "^3.7.0",
+    "core-js": "^3.6.4",
+    "coveralls": "^3.0.9",
+    "doctoc": "^1.4.0",
+    "eslint": "^7.14",
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^23.0.0",
+    "grunt-protractor-runner": "^5.0.0",
+    "grunt-protractor-webdriver": "^0.2.5",
+    "grunt-sass": "3.1.0",
+    "jasmine-core": "^3.5.0",
+    "karma": "^6",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-typescript": "4.1.1",
+    "protractor": "^7.0.0",
+    "puppeteer": "^5.4.1",
+    "sass": "^1.42.1",
+    "serve-static": "^1.14.1",
+    "ts-loader": "^8.0.7",
+    "typescript": "^3.7",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/alaind831"
+    },
+    {
+      "type": "venmo",
+      "url": "https://www.venmo.com/adumesny"
+    }
+  ],
+  "homepage": "http://gridstack.js/",
+  "keywords": [
+    "Typescript",
+    "gridstack.js",
+    "grid",
+    "gridster",
+    "layout",
+    "responsive",
+    "dashboard",
+    "resize",
+    "drag&drop",
+    "widgets",
+    "Angular",
+    "React",
+    "Vue",
+    "JavaScript"
+  ],
+  "license": "MIT",
+  "main": "./dist/gridstack.js",
+  "name": "gridstack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gridstack/gridstack.js.git"
+  },
+  "scripts": {
+    "build": "yarn --no-progress && rm -rf dist/* && grunt && yarn build:es6 && yarn build:es5 && yarn doc",
+    "build:es5": "webpack --config es5/webpack.config.js && tsc --stripInternal --project es5/tsconfig.json",
+    "build:es6": "webpack && tsc --stripInternal",
+    "doc": "doctoc ./README.md && doctoc ./doc/README.md && doctoc ./doc/CHANGES.md",
+    "lint": "tsc --noEmit && eslint src/*.ts",
+    "prepublishOnly": "yarn build",
+    "reset": "rm -rf dist node_modules",
+    "t": "rm -rf dist/* && grunt && tsc --stripInternal",
+    "test": "yarn lint && karma start karma.conf.js",
+    "w": "webpack"
+  },
+  "types": "./dist/gridstack.d.ts",
+  "version": "7.1.1"
+}

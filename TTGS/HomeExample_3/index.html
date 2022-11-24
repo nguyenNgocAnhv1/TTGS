@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+
+
+
+  <!-- Font awesome -->
+  <!-- ----------------------------------------------------------------------------------- -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default" disabled
+        href="/css/app-34c216fc2822b17a4662e494f89c8c00.css?vsn=d">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-244c8fa186db90617484a983146e7203.css?vsn=d"> -->
+
+  <!-- Aor ma canada sixuka -->
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/sharp-solid.css">
+
+  <!-- ----------------------------------------------------------------------------------- -->
+
+  <!-- Set CSS normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <!-- Font roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="Access/Bootstrap/bs.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+  <!-- Chart Js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Root CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <!-- Drag Drop Resize -->
+  <!-- <script src="Access/DragDrop/gridstack/dist/gridstack-all.js"></script>
+  <link rel="stylesheet" href="drag.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/individuals/resizable.min.js"></script> -->
+  <!-- <link href="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/css/interactive.min.css" rel="stylesheet"/> -->
+
+
+
+
+</head>
+<style>
+
+</style>
+
+<body>
+  <div class="contextmenu">
+    <ul class="list-unstyled d-flex">
+      <li class="pt-1 contextmenu_1 ">
+        <h6 class="text-center">Kiểu biểu đồ</h6>
+        <div class="">
+          <ul class="list-unstyled text-center">
+            <li class="contextmenu-select">Cột</li>
+            <li class="contextmenu-select">Đường</li>
+            <li class="contextmenu-select">Tròn</li>
+            <li class="contextmenu-select">Polar</li>
+            <li class="contextmenu-select">Radar</li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="text-center contextmenu_2 pt-1">
+        <h6 class="text-center">Kiểu màu</h6>
+        <div class="d-flex align-items-center justify-content-center">
+          <input class="pe-2" type="color" id="color" name="color" value="#842e2e">
+          <i class="fa-solid fa-xmark ps-2"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <input class="pe-2" type="color" id="color" name="color" value="#842e2e">
+          <i class="fa-solid fa-xmark ps-2"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <input class="pe-2" type="color" id="color" name="color" value="#842e2e">
+          <i class="fa-solid fa-xmark ps-2"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <input class="pe-2" type="color" id="color" name="color" value="#842e2e">
+          <i class="fa-solid fa-xmark ps-2"></i>
+        </div>
+        <div class="d-flex  ">
+          <div class="" style="height: 24px; width: 82px;">
+          <i class="fa-solid fa-plus " style="margin-left: 5px;"></i>
+          </div>
+          
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Header -->
+  <div class="pt-3 mt-2 container-xxxl ">
+    <div class="row d-flex align-items-center">
+      <div class="col-sm-7 col-12">
+        <h3 class="fw-bold fs-4 text-color-header">THEO GIÕI GIÁM SÁT TỔNG HỢP CỦA CỔNG THÔNG TIN ĐIỆN TỬ</h1>
+      </div>
+      <div class="col-sm-5 col-12 ms-auto d-flex justify-content-end">
+        <button class="header-btn fw-bold  text-color-gray px-4 rounded-4  py-1 me-4" id="btn1">
+          <i class="fa-solid fa-buildings "></i>
+          Đơn Vị
+        </button>
+        <button class="header-btn  fw-bold  text-color-gray px-4 rounded-4 py-1  ">
+          <i class="fa-solid fa-timer"></i>
+          Thời Gian
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Body -->
+  <!-- 1 -->
+
+  <div class="container-xxxl  ">
+
+    <div class="row ">
+      <div class="col-sm-9 col-12  _border-light mt-4 ">
+        <div class="row">
+          <h5 class="text-color-content ">Chỉ số tổng hợp</h5>
+          <p class="text-color-gray">Lượt xem trang theo ngày</p>
+        </div>
+        <div class="row ">
+          <div class="col-md-8 col-12 " style="">
+            <div id="p_chart_1">
+              <canvas class="chart_1"></canvas>
+            </div>
+          </div>
+          <div class="col-sm-4 col-12 d-flex flex-column justify-content-end ">
+            <div class="mb-4">
+              <div class=" ">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-color-content p-0 m-0 fs-6 fw-bold">Lượt Xem Trang</h6>
+                    <p class="p-0 m-0 text-color-gray">65% so với kỳ trước</p>
+                </div>
+                <div class="d-flex justify-content-between pt-1">
+                  <h5 class="p-0 m-0 text-color-content">1234</h4>
+                    <p class="p-0 m-0 text-color-gray">20,000</p>
+                </div>
+              </div>
+              <div class="progress " style="height: 10px;">
+                <div class="progress-bar bg-blue-light" role="progressbar" aria-label="Success example"
+                  style="width: 78%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="mt-3">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-color-content p-0 m-0 fs-6 fw-bold">Truy cập</h6>
+                    <p class="p-0 m-0 text-color-gray">45% so với kỳ trước</p>
+                </div>
+                <div class="d-flex justify-content-between pt-1">
+                  <h5 class="p-0 m-0 text-color-content">678</h4>
+                    <p class="p-0 m-0 text-color-gray">4,000</p>
+                </div>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar bg-orange-light" role="progressbar" aria-label="Success example"
+                  style="width: 54% ;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="mt-3">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-color-content p-0 m-0 fs-6 fw-bold">Người dùng mới</h5>
+                  <p class="p-0 m-0 text-color-gray">20% so với kỳ trước</p>
+                </div>
+                <div class="d-flex justify-content-between pt-1">
+                  <h5 class="p-0 m-0 text-color-content">16869</h5>
+                  <p class="p-0 m-0 text-color-gray">85,000</p>
+                </div>
+              </div>
+              <div class="progress" style="height: 10px;">
+                <div class="progress-bar bg-pink-light" role="progressbar" aria-label="Success example"
+                  style="width: 44%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-sm-3 col-12 mt-4 ">
+        <div class="_border-light_2    ">
+          <h5 class="text-color-content p-0 m-0 fs-5 _border-bottom ps-3 pt-3 pb-3">Trình duyệt</h5>
+          <div class="_border-bottom py-4 my-2 d-flex justify-content-center align-items-center" style="">
+            <div class="" style="width:200px" id="p_chart_2">
+              <canvas class="chart_2"></canvas>
+            </div>
+          </div>
+
+          <div class="row ps-3 pt-3">
+            <div class="col-6">
+              <h5 class="text-color-gray p-0 m-0 fs-6 fw-bold">CHROME</h5>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-small pe-1 text-light-orange"></i>
+                <div class="">
+                  <h5 class="p-0 m-0 text-color-content fs-5 d-inline-block  ">1320</h5>
+                  <span class="p-0 m-0 text-color-gray fw-normal fs-6">25%</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6">
+              <h5 class="text-color-gray p-0 m-0 fs-6 fw-bold">COC COC</h5>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-small pe-1 text-light-pink"></i>
+                <div class="">
+                  <h5 class="p-0 m-0 text-color-content fs-5 d-inline-block  ">987</h5>
+                  <span class="p-0 m-0 text-color-gray fw-normal fs-6">20%</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row ps-3 py-3">
+            <div class="col-6">
+              <h5 class="text-color-gray p-0 m-0 fs-6 fw-bold">FIREFOX</h5>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-small pe-1 text-light-blue"></i>
+                <div class="">
+                  <h5 class="p-0 m-0 text-color-content fs-5 d-inline-block  ">2010</h5>
+                  <span class="p-0 m-0 text-color-gray fw-normal fs-6">30%</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6">
+              <h5 class="text-color-gray p-0 m-0 fs-6 fw-bold">OHTER</h5>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-small pe-1 text-light-blue2"></i>
+                <div class="">
+                  <h5 class="p-0 m-0 text-color-content fs-5 d-inline-block  ">1054</h5>
+                  <span class="p-0 m-0 text-color-gray fw-normal fs-6">25%</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="row pt-2 mt-1">
+      <div class="col-sm-5 col-12 ps-0">
+        <div class="_border-light">
+          <h5 class="text-color-content">Tỷ lệ thoát</h5>
+          <p class="text-color-gray">Tỷ lệ thoát là tỷ lệ số người truy cập vào trang và thoát ra mà không xem
+            thêm bất cứ trang nào khác hay click thêm vào các đường link khác trên trang </p>
+
+          <div class=" position-relative" style="">
+            <div class="d-flex align-items-center  chart_3-1">
+              <i class="fa-solid fa-chart-tree-map fs-1 chart_3-i mt-1 me-1"></i>
+              <div class="">
+                <h5 class="p-0 m-0 text-color-content fs-4 d-inline-block fw-bold ">90.05%</h5>
+                <p class="p-0 m-0 text-color-gray fw-normal fs-6">KỲ NÀY</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center  chart_3-2">
+              <i class="fa-solid fa-chart-tree-map fs-1 chart_3-i2 mt-1 me-1"></i>
+              <div class="">
+                <h5 class="p-0 m-0 text-color-content fs-4 d-inline-block fw-bold ">2%</h5>
+                <p class="p-0 m-0 text-color-gray fw-normal fs-6">SO VỚI KỲ TRƯỚC</p>
+              </div>
+            </div>
+            <div id="p_chart_3">
+              <canvas class="chart_3"></canvas>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12 p-0 _border-light">
+        <div class="2 ">
+          <div class="_border-bottom  ">
+            <h5 class="text-color-content ps-3 pt-3 mt-1 pb-2 pe-5 ">Loại thiết bị</h5>
+
+          </div>
+          <div class="mx-auto " style="width:345px; height: 345px;">
+            <div id="p_chart_5">
+              <canvas class="chart_5"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-12  ">
+        <div class=" _border-light_2 pb-5">
+          <div class="_border-bottom  ">
+            <h5 class="text-color-content ps-3 pt-3 mt-1 pb-2 pe-5 ">Thống kê nguồn truy cập</h5>
+
+          </div>
+          <h2 class="text-color-content mb-0 fs-1 text-center pt-4">12345</h2>
+          <h6 class="text-color-content text-center py-2">Truy cập từ các nguồn khác nhau</h6>
+          <p class="text-color-gray text-center py-2 pb-3">Nguồn truy cập có thể trực tiếp vào hoặc từ nơi khác vị dụ
+            như từ cổng DVC Quốc Gia, Google, Facebook</p>
+          <div class="d-grid gap-2 py-3 px-3">
+            <button class="btn btn-outline-primary fw-bold " type="button">XEM CHI TIẾT</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <input type="color">
+</body>
+
+</html>
+
+<script src="scrip.js"></script>
+<script src="contextmenu.js"></script>
+<script>
+  customChartMenu(".chart_1", ".contextmenu",)
+  customChartMenu(".chart_2", ".contextmenu")
+  customChartMenu(".chart_3", ".contextmenu")
+  customChartMenu(".chart_5", ".contextmenu")
+
+</script>
+<script src="resizedrag.js"></script>
